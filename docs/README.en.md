@@ -43,6 +43,10 @@ docker compose down
 
 > Uses [Docker Compose V2](https://docs.docker.com/compose/migrate/) (`docker compose` command). The legacy [`docker-compose`](https://github.com/docker/compose/tree/v1) (V1) also works for now, but is not recommended — support may break in the future.
 
+### Standalone run (no repository cloning required)
+
+The `docker-standalone/` directory contains a `Dockerfile` and `docker-compose.yaml` that clone the repository from GitHub and build the project autonomously. Copy these two files to any directory and run `docker compose up` — the source code and dependencies will be fetched automatically.
+
 ## Run locally
 
 ```bash
@@ -57,10 +61,6 @@ npm run generate
 ```
 
 Output — static files in `.output/public`.
-
-### Standalone run (no repository cloning required)
-
-The `docker-standalone/` directory contains a `Dockerfile` and `docker-compose.yaml` that clone the repository from GitHub and build the project autonomously. Copy these two files to any directory and run `docker compose up` — the source code and dependencies will be fetched automatically.
 
 ## Architecture notes
 
